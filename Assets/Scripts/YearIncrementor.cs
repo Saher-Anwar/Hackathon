@@ -36,7 +36,6 @@ public class YearIncrementor : MonoBehaviour
         }
 
         tmp.text = $"Year {Year}\nQuarter {Quarter}";
-
         
     }
 }
