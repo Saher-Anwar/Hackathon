@@ -34,7 +34,17 @@ public class Country : MonoBehaviour
     {
         GameObject instance = Instantiate(factoryTypes[factoryType], Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.rotation);
         instance.transform.position = new Vector3(instance.transform.position.x, instance.transform.position.y, -9);
-        AddNewHeadline($"A new {factoryType} factory is being built in {CountryName}. It is estimated to take X amount of years to be made");
+
+        StartCoroutine(DisplayNewMessage("Global sea levels have risen by 2 inches in the past 2 years", 13));
+        StartCoroutine(DisplayNewMessage($"Hurricane Ian hits Florida. It serves as an example of the effect of climate change and how it will only get worse", 23f));
+        AddNewHeadline($"A new {factoryType} factory is being built in {CountryName}. It is estimated to produce {instance.GetComponent<factory>().emission * 2} levels of Methane per Quarter! ");
+        //AddNewHeadline();
+    }
+
+    IEnumerator DisplayNewMessage(string message, float timeToWait)
+    {
+        yield return new WaitForSeconds(timeToWait);
+        AddNewHeadline(message);
     }
 
     void OnMouseOver()

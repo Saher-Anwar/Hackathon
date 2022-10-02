@@ -24,7 +24,7 @@ public class Ticker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if(currentItem.GetXPosition <= -currentItem.GetWidth)
+        //if (currentItem.GetXPosition <= -currentItem.GetWidth)
         //{
         //    AddTickerItem(fillerItems[Random.Range(0, fillerItems.Length)]);
         //}
