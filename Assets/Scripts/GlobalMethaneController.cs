@@ -28,6 +28,13 @@ public class GlobalMethaneController : MonoBehaviour
     {
         tmp.text = $"Global CH4: {MethaneLevel}%";   
     }
+    public void AddMethane(float methaneAddition)
+    {
+        MethaneLevel += methaneAddition;
+    }
 
-
+    public void DecreaseMethane(float methaneReduction)
+    {
+        MethaneLevel -= methaneReduction;
+    }
 }

@@ -6,7 +6,7 @@ public class Country : MonoBehaviour
 {
     public string CountryName;
     public GameObject factory;
-    public List<GameObject> factories;
+    public Dictionary<string, GameObject> factoryTypes;
 
     // Start is called before the first frame update
     void Start()
@@ -20,15 +20,9 @@ public class Country : MonoBehaviour
         
     }
 
-    private void OnMouseDown()
-    {
-        Debug.Log("Click detected");
-    }
-
     public void createNewFactory()
     {
         Instantiate(factory, Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.rotation);
-        Debug.Log(Camera.main.ScreenToWorldPoint(Input.mousePosition));
     }
 
     void OnMouseOver()
@@ -37,7 +31,6 @@ public class Country : MonoBehaviour
         {
             print("Constructing LNG factory");
             createNewFactory();
-            Debug.Log("Hovering over country");
         }
     }
 }

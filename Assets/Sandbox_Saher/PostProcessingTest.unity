@@ -318,7 +318,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CountryName: 
   factory: {fileID: 7760551302748738460, guid: 547ce9e64813c4f458bdd5a5281cab8c, type: 3}
-  factories: []
 --- !u!1001 &1545419963507794272
 PrefabInstance:
   m_ObjectHideFlags: 0
