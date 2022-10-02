@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     public float targetMethaneLevel = 50;
     public GlobalMethaneController globalMethanecontroller;
     public YearIncrementor YearIncrementor;
+    public BudgetController BudgetController;
 
     // Start is called before the first frame update
     void Start()
