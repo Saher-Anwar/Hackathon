@@ -21,6 +21,7 @@ public class BudgetController : MonoBehaviour
 
     public void AddProfit(float profit)
     {
+        Debug.Log($"budget {budget} incremented by {profit}");
         budget += profit;
     }
 

@@ -46,9 +46,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   time: 0
-  profit: 0
-  emission: 0
-  manager: {fileID: 5161395455593159132, guid: 02dc50762a062f3438aa3d9a14122161, type: 3}
+  profit: 20000
+  emission: 0.8
+  manager: {fileID: 0}
+  timeIntervalInSecondsBeforeAddingProfit: 4
+  timeIntervalInSecondsForAddingEmission: 2
 --- !u!1 &8588010079059503563
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,7 +124,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d42bcf72c00fc084d8693e2944a13bce, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 81db9c0e99ca1494cafe7be24fa20a20, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -130,6 +132,6 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0

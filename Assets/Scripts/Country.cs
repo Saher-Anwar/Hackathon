@@ -8,6 +8,7 @@ public class Country : MonoBehaviour
 {
     public string CountryName;
     public GameObject factory;
+    public GameManager gameManager;
 
     [Serializable]
     public class FactoryTypes : SerializableDictionaryBase<string, GameObject> { }
@@ -20,7 +21,7 @@ public class Country : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = GameManager.instance;
     }
 
     // Update is called once per frame
@@ -31,7 +32,9 @@ public class Country : MonoBehaviour
 
     public void createNewFactory(string factoryType)
     {
-        Instantiate(factoryTypes[factoryType], Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.rotation);
+        GameObject instance = Instantiate(factoryTypes[factoryType], Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.rotation);
+        instance.transform.position = new Vector3(instance.transform.position.x, instance.transform.position.y, -9);
+        AddNewHeadline($"A new {factoryType} factory is being built in {CountryName}. It is estimated to take X amount of years to be made");
     }
 
     void OnMouseOver()
@@ -49,5 +52,10 @@ public class Country : MonoBehaviour
         }
 
         Debug.Log("Hovering..");
+    }
+
+    public void AddNewHeadline(string message)
+    {
+        gameManager.newsPanel.AddTickerItem(message);
     }
 }

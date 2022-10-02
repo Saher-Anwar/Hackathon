@@ -7,11 +7,20 @@ public class GameManager : MonoBehaviour
     public GlobalMethaneController globalMethanecontroller;
     public YearIncrementor YearIncrementor;
     public BudgetController BudgetController;
+    public Ticker newsPanel;
 
-    // Start is called before the first frame update
-    void Start()
+    public static GameManager instance;
+
+    private void Awake()
     {
-        
+        if (instance != null && instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            instance = this;
+        }
     }
 
     // Update is called once per frame

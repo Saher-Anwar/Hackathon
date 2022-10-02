@@ -79,5 +79,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df39099e2faa74d48b273ea8984591d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CountryName: 
+  CountryName: Russia
   factory: {fileID: 7760551302748738460, guid: 547ce9e64813c4f458bdd5a5281cab8c, type: 3}
+  gameManager: {fileID: 0}
+  factoryTypes:
+    reorderableList:
+      canAdd: 1
+      canRemove: 1
+      draggable: 1
+      expandable: 1
+      multipleSelection: 1
+      isExpanded: 1
+      label:
+        m_Text: Keys
+        m_Image: {fileID: 0}
+        m_Tooltip: 
+      headerHeight: 18
+      footerHeight: 13
+      slideEasing: 0.15
+      verticalSpacing: 2
+      showDefaultBackground: 1
+      elementDisplayType: 0
+      elementNameProperty: 
+      elementNameOverride: 
+      elementIcon: {fileID: 0}
+    reqReferences: {fileID: 0}
+    isExpanded: 1
+    _keyValues:
+    - Liquified Natural Gas
+    - Coal Mine
+    _keys:
+    - Liquified Natural Gas
+    - Coal Mine
+    _values:
+    - {fileID: 3801673003343166938, guid: d9aacf50f12a5d9489e50eb5da0955ed, type: 3}
+    - {fileID: 3801673003343166938, guid: d9aacf50f12a5d9489e50eb5da0955ed, type: 3}
