@@ -1097,6 +1097,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 863761220}
     - target: {fileID: 5161395455593159132, guid: 02dc50762a062f3438aa3d9a14122161, type: 3}
+      propertyPath: BudgetController
+      value: 
+      objectReference: {fileID: 607194688}
+    - target: {fileID: 5161395455593159132, guid: 02dc50762a062f3438aa3d9a14122161, type: 3}
       propertyPath: globalMethanecontroller
       value: 
       objectReference: {fileID: 141794748}
