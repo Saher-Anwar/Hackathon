@@ -28,6 +28,7 @@ public class Country : MonoBehaviour
     public void createNewFactory()
     {
         Instantiate(factory, Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.rotation);
+        Debug.Log(Camera.main.ScreenToWorldPoint(Input.mousePosition));
     }
 
     void OnMouseOver()
@@ -36,6 +37,7 @@ public class Country : MonoBehaviour
         {
             print("Constructing LNG factory");
             createNewFactory();
+            Debug.Log("Hovering over country");
         }
     }
 }

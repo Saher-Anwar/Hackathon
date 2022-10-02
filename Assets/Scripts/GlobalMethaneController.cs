@@ -10,7 +10,7 @@ public class GlobalMethaneController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Camera.main.ScreenToViewportPoint(Input.mousePosition);
     }
 
     // Update is called once per frame
