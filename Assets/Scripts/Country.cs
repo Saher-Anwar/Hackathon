@@ -1,3 +1,5 @@
+using RotaryHeart.Lib.SerializableDictionary;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +8,14 @@ public class Country : MonoBehaviour
 {
     public string CountryName;
     public GameObject factory;
-    public Dictionary<string, GameObject> factoryTypes;
+
+    [Serializable]
+    public class FactoryTypes : SerializableDictionaryBase<string, GameObject> { }
+
+    public FactoryTypes factoryTypes;
+
+    public const string lng = "Liquified Natural Gas";
+    public const string coalMine = "Coal Mine";
 
     // Start is called before the first frame update
     void Start()
@@ -20,9 +29,9 @@ public class Country : MonoBehaviour
         
     }
 
-    public void createNewFactory()
+    public void createNewFactory(string factoryType)
     {
-        Instantiate(factory, Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.rotation);
+        Instantiate(factoryTypes[factoryType], Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.rotation);
     }
 
     void OnMouseOver()
@@ -30,7 +39,15 @@ public class Country : MonoBehaviour
         if (Input.GetKeyDown("space"))
         {
             print("Constructing LNG factory");
-            createNewFactory();
+            createNewFactory(lng);
         }
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            print("Constructing Coal Mine");
+            createNewFactory(coalMine);
+        }
+
+        Debug.Log("Hovering..");
     }
 }
